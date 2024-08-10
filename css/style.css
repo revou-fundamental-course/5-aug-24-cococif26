@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400&family=Poppins:wght@200;300;400;500;600&family=Rubik&display=swap");
+*,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #1b1b1b;
+}
+
+.form-container {
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  margin: 15px;
+  padding: 15px;
+}
+
+main {
+  display: flex;
+}
+
+.main-title {
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.main-articel {
+  padding: 15px;
+}
+
+.text-kalkulator {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.text-articel {
+  margin-top: 6px;
+  font-size: 16px;
+}
+
+.text-form {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+label {
+  font-size: 16px;
+  padding: 5px;
+}
+.aside-1 {
+  padding: 5px;
+  margin: 20px;
+  background-color: #fb4538;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.aside-2 {
+  margin-top: -15px;
+  padding: 35px;
+}
+
+.submit {
+  cursor: pointer;
+  background-color: #fb4538;
+  border-radius: 5px;
+  font-size: 15px;
+  border: none;
+  padding: 8px;
+  color: white;
+}
+
+.reset {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 1px solid;
+  font-size: 15px;
+  padding: 8px;
+  color: rgb(0, 0, 0);
+}
+
+.form-btn-container {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.form-btn-container .submit:hover {
+  background-color: #45a049;
+}
+
+.form-radio {
+  padding-left: 6px;
+  margin: 8px 0;
+}
+.form-angka {
+  width: 100%;
+  padding: 12px 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.articel-2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.fitur {
+  list-style-type: number;
+  font-size: 18px;
+  padding: 2px;
+  margin-top: 3px;
+  margin-left: 18px;
+}
+
+.container-hasil {
+  margin-bottom: 25px;
+  width: 655px;
+  height: 335px;
+  background-color: #36469e;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.text-hasil {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.main-hasil {
+  font-size: 25px;
+  margin: 3px;
+  text-align: center;
+  position: relative;
+  top: 30%;
+}
+
+.btn-unduh {
+  background-color: #fb4538;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 37%;
+  margin-left: 245px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  padding: 8px;
+  color: white;
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  background-color: #fb4538;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  color: white;
+}
+
+.container-list-penyakit {
+  margin-top: 10px;
+  width: 655px;
+  height: 160px;
+  background-color: #ffbcb9;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.text-sakit {
+  padding: 15px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.ul-sakit {
+  display: flex;
+  margin-left: 10px;
+}
+.li-sakit {
+  list-style-type: none;
+  padding: 8px;
+}
+
+.btn-s {
+  cursor: pointer;
+  margin-top: 12px;
+  margin-left: 15px;
+  background-color: #fb4538;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  color: white;
+}
+
+.footer {
+  padding: 15px;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
