@@ -21,30 +21,30 @@
           </article>
 
           <div class="form-container">
-            <form>
+            <form id="bmiForm">
               <div>
                 <p class="text-form">Jenis kelamin</p>
-                <input type="radio" id="pria" class="form-radio" /><label for="pria" name="jk" value="pria">Pria</label> <input type="radio" id="wanita" /><label for="wanita" name="jk" value="wanita">Wanita</label>
+                <input type="radio" id="pria" name="jk" value="pria" class="form-radio" /><label for="pria">Pria</label> <input type="radio" id="wanita" name="jk" value="wanita" /><label for="wanita">Wanita</label>
               </div>
 
               <div>
-                <p class="text-form">Berat Badan(Kg)</p>
-                <input type="number" class="form-angka" />
+                <p class="text-form" for="berat">Berat Badan(Kg)</p>
+                <input type="number" class="form-angka" id="berat" step="0.1" min="0" />
               </div>
 
               <div>
                 <p class="text-form">Usia (tahun)</p>
-                <input type="number" class="form-angka" />
+                <input type="number" class="form-angka" id="usia" min="0" />
               </div>
 
               <div>
-                <p class="text-form">Tinggi Badan(cm)</p>
-                <input type="number" class="form-angka" />
+                <p class="text-form" for="tinggi">Tinggi Badan(cm)</p>
+                <input type="number" class="form-angka" id="tinggi" step="0.1" min="0" />
               </div>
 
               <div class="form-btn-container">
-                <button class="submit">Hitung BMI</button>
-                <button class="reset">Reset</button>
+                <button type="button" class="submit" onclick="hitungBMI()">Hitung BMI</button>
+                <button type="button" class="reset" onclick="resetForm()">Reset</button>
               </div>
             </form>
           </div>
@@ -72,14 +72,14 @@
         <section>
           <p class="text-hasil">Hasil</p>
           <div class="container-hasil">
-            <p class="main-hasil" style="color: white">Berat badan lebih</p>
-            <p class="main-hasil" style="color: white">24,7</p>
-            <p class="main-hasil" style="color: white">Anda memiliki berat badan berlebih</p>
+            <p class="main-hasil" style="color: white">Berat badan Anda</p>
+            <p class="main-hasil" id="nilaibmi" style="color: white"></p>
+            <p class="main-hasil" id="hasil" style="color: white"></p>
             <a href="#" class="btn-unduh">Download hasil BMI</a>
           </div>
-          <p class="text-articel" style="color: white">Hasil BMI diantara 23 dan 25</p>
-          <p class="text-articel" style="color: white">Anda berada dalam kategori overweight atau berat badan berlebihan. Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga.</p>
-          <p class="text-articel" style="color: white">Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.</p>
+          <p class="text-articel" id="info" style="color: white"></p>
+          <p class="text-articel" id="info" style="color: white"></p>
+          <p class="text-articel" id="info" style="color: white"></p>
           <button class="btn">Konsultasi ahli gizi</button>
           <button class="btn">Registrasi Online ahli gizi</button>
           <p class="text-articel" style="color: white">
@@ -104,5 +104,7 @@
     <footer>
       <p class="footer">&copy;BMI-2024</p>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
