@@ -24,22 +24,26 @@
             <form id="bmiForm">
               <div>
                 <p class="text-form">Jenis kelamin</p>
-                <input type="radio" id="pria" name="jk" value="pria" class="form-radio" /><label for="pria">Pria</label> <input type="radio" id="wanita" name="jk" value="wanita" /><label for="wanita">Wanita</label>
+                <input type="radio" id="pria" name="jk" value="pria" class="form-radio" required /><label for="pria">Pria</label> <input type="radio" id="wanita" name="jk" value="wanita" /><label for="wanita">Wanita</label>
+                <p id="validasi-jk" class="error-message" style="font-size: 10px; color: red"></p>
               </div>
 
               <div>
                 <p class="text-form" for="berat">Berat Badan(Kg)</p>
-                <input type="number" class="form-angka" id="berat" step="0.1" min="0" />
+                <input type="number" class="form-angka" id="berat" step="0.1" min="0" required />
+                <p id="validasi-berat" class="error-message" style="font-size: 10px; color: red"></p>
               </div>
 
               <div>
                 <p class="text-form">Usia (tahun)</p>
-                <input type="number" class="form-angka" id="usia" min="0" />
+                <input type="number" class="form-angka" id="usia" min="0" required />
+                <p id="validasi-usia" class="error-message" style="font-size: 10px; color: red"></p>
               </div>
 
               <div>
                 <p class="text-form" for="tinggi">Tinggi Badan(cm)</p>
-                <input type="number" class="form-angka" id="tinggi" step="0.1" min="0" />
+                <input type="number" class="form-angka" id="tinggi" step="0.1" min="0" required />
+                <p id="validasi-tinggi" class="error-message" style="font-size: 10px; color: red"></p>
               </div>
 
               <div class="form-btn-container">

@@ -27,18 +27,50 @@ function kategoriBb(bmi) {
   }
 }
 
-function hitungBMI() {
+function validasiInput() {
   const berat = parseFloat(document.getElementById("berat").value);
   const tinggi = parseFloat(document.getElementById("tinggi").value);
   const usia = parseInt(document.getElementById("usia").value);
   const jenisKelamin = document.querySelector('input[name="jk"]:checked');
+  let isValid = true;
 
-  if (isNaN(berat) || isNaN(tinggi) || tinggi <= 0 || berat <= 0 || isNaN(usia) || usia <= 0 || !jenisKelamin) {
-    document.getElementById("hasil").innerText = "Masukkan data yang valid!";
+  // Reset error messages
+  document.querySelectorAll(".error-message").forEach((elem) => (elem.innerText = ""));
+
+  if (!jenisKelamin) {
+    document.getElementById("validasi-jk").innerText = "Jenis kelamin harus dipilih.";
+    isValid = false;
+  }
+
+  if (isNaN(berat) || berat <= 0) {
+    document.getElementById("validasi-berat").innerText = "Berat badan harus lebih dari 0.";
+    isValid = false;
+  }
+
+  if (isNaN(tinggi) || tinggi <= 0) {
+    document.getElementById("validasi-tinggi").innerText = "Tinggi badan harus lebih dari 0.";
+    isValid = false;
+  }
+
+  if (isNaN(usia) || usia <= 0) {
+    document.getElementById("validasi-usia").innerText = "Usia harus lebih dari 0.";
+    isValid = false;
+  }
+
+  return isValid;
+}
+
+function hitungBMI() {
+  if (!validasiInput()) {
     document.getElementById("nilaibmi").innerText = "";
     document.getElementById("info").innerText = "";
     return;
   }
+
+  const berat = parseFloat(document.getElementById("berat").value);
+  const tinggi = parseFloat(document.getElementById("tinggi").value);
+  const usia = parseInt(document.getElementById("usia").value);
+  const jenisKelamin = document.querySelector('input[name="jk"]:checked');
 
   const tinggiM = tinggi / 100;
   const bmi = berat / (tinggiM * tinggiM);
@@ -62,4 +94,5 @@ function resetForm() {
   document.getElementById("hasil").innerText = "";
   document.getElementById("nilaibmi").innerText = "";
   document.getElementById("info").innerText = "";
+  document.querySelectorAll(".error-message").forEach((elem) => (elem.innerText = ""));
 }
